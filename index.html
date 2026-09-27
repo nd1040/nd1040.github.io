@@ -66,11 +66,12 @@
     <div class="fixed -top-24 -left-24 w-96 h-96 bg-rutgers-scarlet/5 rounded-full blur-3xl pointer-events-none"></div>
     <div class="fixed top-1/2 -right-24 w-96 h-96 bg-rutgers-scarlet/5 rounded-full blur-3xl pointer-events-none"></div>
 
+    <!-- Header Navigation Bar -->
     <header class="sticky top-0 z-40 w-full glass-card border-b border-slate-200/60 shadow-sm transition-all duration-300">
         <div class="max-w-4xl mx-auto px-6 py-3.5 flex items-center justify-between">
             
             <!-- Brand / Rutgers Badge -->
-            <a href="#" class="flex items-center gap-3.5 group">
+            <a href="#about" class="flex items-center gap-3.5 group">
                 <div class="relative w-11 h-11 bg-rutgers-scarlet text-white font-extrabold text-2xl flex items-center justify-center rounded-2xl shadow-scarlet-glow group-hover:scale-105 transition-all duration-300">
                     <span class="tracking-tighter">R</span>
                     <span class="absolute -bottom-1 -right-1 flex h-3 w-3">
@@ -87,125 +88,212 @@
                 </div>
             </a>
 
-            <!-- Header Quick Contact Action -->
-            <div class="flex items-center gap-2">
-                <a href="https://www.linkedin.com/in/nishidalia/" target="_blank" rel="noopener noreferrer" 
-                   class="p-2.5 text-slate-600 hover:text-rutgers-scarlet hover:bg-rutgers-light rounded-2xl transition-all duration-200" 
-                   title="Connect on LinkedIn">
-                    <i class="fab fa-linkedin-in text-lg"></i>
-                </a>
-                <button onclick="openContactModal()" 
-                        class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-2xl bg-rutgers-light text-rutgers-scarlet border border-rutgers-border hover:bg-rutgers-scarlet hover:text-white transition-all duration-200">
-                    <i class="far fa-paper-plane"></i> Contact
-                </button>
+            <!-- Navigation Links & Contact -->
+            <div class="flex items-center gap-4 sm:gap-6">
+                <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-600">
+                    <a href="#about" class="hover:text-rutgers-scarlet transition-colors">About</a>
+                    <a href="#skills" class="hover:text-rutgers-scarlet transition-colors">Skills</a>
+                    <a href="#contact-modal" onclick="openContactModal()" class="hover:text-rutgers-scarlet transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-2">
+                    <a href="https://www.linkedin.com/in/nishidalia/" target="_blank" rel="noopener noreferrer" 
+                       class="p-2.5 text-slate-600 hover:text-rutgers-scarlet hover:bg-rutgers-light rounded-2xl transition-all duration-200" 
+                       title="Connect on LinkedIn">
+                        <i class="fab fa-linkedin-in text-lg"></i>
+                    </a>
+                    <button onclick="openContactModal()" 
+                            class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-2xl bg-rutgers-light text-rutgers-scarlet border border-rutgers-border hover:bg-rutgers-scarlet hover:text-white transition-all duration-200">
+                        <i class="far fa-paper-plane"></i> Contact
+                    </button>
+                </div>
             </div>
 
         </div>
     </header>
 
-    <main class="relative z-10 max-w-4xl mx-auto px-6 py-10 sm:py-16 flex-grow w-full flex flex-col justify-center">
+    <main class="relative z-10 max-w-4xl mx-auto px-6 py-10 sm:py-16 flex-grow w-full space-y-12">
 
-        <!-- Main Digital Card -->
-        <div class="glass-card rounded-3xl border border-slate-200/80 shadow-glass p-8 sm:p-12 relative overflow-hidden transition-all duration-300 hover:border-rutgers-border">
-            
-            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-rutgers-scarlet via-rose-500 to-rutgers-scarlet"></div>
-
-            <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
-                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-rutgers-light border border-rutgers-border text-rutgers-scarlet text-xs font-bold tracking-wide">
-                    <span class="relative flex h-2.5 w-2.5">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rutgers-scarlet opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rutgers-scarlet"></span>
-                    </span>
-                    Second-Year Student
-                </div>
-
-                <div class="text-xs font-bold text-slate-400 tracking-wider uppercase">
-                    Class of 2029
-                </div>
-            </div>
-
-            <!-- Name and Title Heading -->
-            <div class="mb-8">
-                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-none mb-3">
-                    Nishi Dalia
-                </h1>
-                <p class="text-lg sm:text-xl font-semibold text-slate-600 flex items-center gap-2 flex-wrap">
-                    <span>Rutgers Business School Student</span>
-                    <span class="text-slate-300 hidden sm:inline">&bull;</span>
-                    <span class="text-rutgers-scarlet">Finance Major</span>
-                </p>
-            </div>
-
-            <!-- Personal Statement Box -->
-            <div class="relative bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm mb-8 group hover:shadow-md transition-shadow">
-                <div class="absolute -left-0.5 top-6 bottom-6 w-1 bg-rutgers-scarlet rounded-r-full"></div>
-                <i class="fas fa-quote-left text-rutgers-scarlet/15 text-4xl absolute top-4 right-6 pointer-events-none"></i>
+        <!-- SECTION 1: ABOUT / HERO DIGITAL CARD -->
+        <section id="about" class="scroll-mt-24">
+            <div class="glass-card rounded-3xl border border-slate-200/80 shadow-glass p-8 sm:p-12 relative overflow-hidden transition-all duration-300 hover:border-rutgers-border">
                 
-                <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-medium relative z-10">
-                    Welcome! I'm Nishi, a second-year Finance student at Rutgers Business School. I am passionate about learning how data and analytics support business strategy and decision-making. As I continue to strengthen my technical skill set, I am interested in applying my quantitative skills to experiences in data, finance, and economics, and open to connecting with like-minded peers and professionals in the field.
-                </p>
-            </div>
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-rutgers-scarlet via-rose-500 to-rutgers-scarlet"></div>
 
-            <!-- Skills Section -->
-            <div class="mb-10">
-                <h2 class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
-                    <i class="fas fa-layer-group text-rutgers-scarlet"></i> Skills & Competencies
-                </h2>
-                <div class="flex flex-wrap gap-2.5">
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:border-rutgers-border hover:bg-rutgers-light hover:text-rutgers-scarlet transition-all duration-200 cursor-default">
-                        <i class="fas fa-brain text-rutgers-scarlet"></i> Critical Thinking
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-rutgers-light border border-rutgers-border text-rutgers-scarlet text-xs font-bold tracking-wide">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rutgers-scarlet opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rutgers-scarlet"></span>
+                        </span>
+                        Second-Year Student
+                    </div>
+
+                    <div class="text-xs font-bold text-slate-400 tracking-wider uppercase">
+                        Class of 2029
+                    </div>
+                </div>
+
+                <!-- Name and Title Heading -->
+                <div class="mb-8">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-none mb-3">
+                        Nishi Dalia
+                    </h1>
+                    <p class="text-lg sm:text-xl font-semibold text-slate-600 flex items-center gap-2 flex-wrap">
+                        <span>Rutgers Business School Student</span>
+                        <span class="text-slate-300 hidden sm:inline">&bull;</span>
+                        <span class="text-rutgers-scarlet">Finance Major</span>
+                    </p>
+                </div>
+
+                <!-- Personal Statement Box -->
+                <div class="relative bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm mb-10 group hover:shadow-md transition-shadow">
+                    <div class="absolute -left-0.5 top-6 bottom-6 w-1 bg-rutgers-scarlet rounded-r-full"></div>
+                    <i class="fas fa-quote-left text-rutgers-scarlet/15 text-4xl absolute top-4 right-6 pointer-events-none"></i>
+                    
+                    <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-medium relative z-10">
+                        Welcome! I'm Nishi, a second-year Finance student at Rutgers Business School. I am passionate about learning how data and analytics support business strategy and decision-making. As I continue to strengthen my technical skill set, I am interested in applying my quantitative skills to experiences in data, finance, and economics, and open to connecting with like-minded peers and professionals in the field.
+                    </p>
+                </div>
+
+                <!-- Key Highlight Badges -->
+                <div class="flex flex-wrap gap-2.5 mb-10">
+                    <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-xl bg-slate-100/80 text-slate-700 border border-slate-200/60 hover:bg-rutgers-light hover:text-rutgers-scarlet hover:border-rutgers-border transition-all cursor-default">
+                        <i class="fas fa-university text-rutgers-scarlet"></i> Rutgers Business School
                     </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:border-rutgers-border hover:bg-rutgers-light hover:text-rutgers-scarlet transition-all duration-200 cursor-default">
-                        <i class="fas fa-clock text-rutgers-scarlet"></i> Time Management
+                    <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-xl bg-slate-100/80 text-slate-700 border border-slate-200/60 hover:bg-rutgers-light hover:text-rutgers-scarlet hover:border-rutgers-border transition-all cursor-default">
+                        <i class="fas fa-chart-line text-rutgers-scarlet"></i> Finance Major
                     </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:border-rutgers-border hover:bg-rutgers-light hover:text-rutgers-scarlet transition-all duration-200 cursor-default">
-                        <i class="fas fa-chart-line text-rutgers-scarlet"></i> Financial Markets
+                    <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-xl bg-slate-100/80 text-slate-700 border border-slate-200/60 hover:bg-rutgers-light hover:text-rutgers-scarlet hover:border-rutgers-border transition-all cursor-default">
+                        <i class="fas fa-graduation-cap text-rutgers-scarlet"></i> Class of 2029
                     </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:border-rutgers-border hover:bg-rutgers-light hover:text-rutgers-scarlet transition-all duration-200 cursor-default">
-                        <i class="fas fa-code text-rutgers-scarlet"></i> Programming
-                    </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:border-rutgers-border hover:bg-rutgers-light hover:text-rutgers-scarlet transition-all duration-200 cursor-default">
-                        <i class="fas fa-file-excel text-rutgers-scarlet"></i> Microsoft Excel, Word & PowerPoint
-                    </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:border-rutgers-border hover:bg-rutgers-light hover:text-rutgers-scarlet transition-all duration-200 cursor-default">
-                        <i class="fas fa-robot text-rutgers-scarlet"></i> Artificial Intelligence
+                    <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-xl bg-slate-100/80 text-slate-700 border border-slate-200/60 hover:bg-rutgers-light hover:text-rutgers-scarlet hover:border-rutgers-border transition-all cursor-default">
+                        <i class="fas fa-map-marker-alt text-rutgers-scarlet"></i> New Brunswick, NJ
                     </span>
                 </div>
-            </div>
 
-            <!-- Key Highlight Badges -->
-            <div class="flex flex-wrap gap-2.5 mb-10 pt-6 border-t border-slate-100">
-                <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-xl bg-slate-100/80 text-slate-700 border border-slate-200/60 hover:bg-rutgers-light hover:text-rutgers-scarlet hover:border-rutgers-border transition-all cursor-default">
-                    <i class="fas fa-university text-rutgers-scarlet"></i> Rutgers Business School
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-xl bg-slate-100/80 text-slate-700 border border-slate-200/60 hover:bg-rutgers-light hover:text-rutgers-scarlet hover:border-rutgers-border transition-all cursor-default">
-                    <i class="fas fa-chart-line text-rutgers-scarlet"></i> Finance Major
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-xl bg-slate-100/80 text-slate-700 border border-slate-200/60 hover:bg-rutgers-light hover:text-rutgers-scarlet hover:border-rutgers-border transition-all cursor-default">
-                    <i class="fas fa-graduation-cap text-rutgers-scarlet"></i> Class of 2029
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-xl bg-slate-100/80 text-slate-700 border border-slate-200/60 hover:bg-rutgers-light hover:text-rutgers-scarlet hover:border-rutgers-border transition-all cursor-default">
-                    <i class="fas fa-map-marker-alt text-rutgers-scarlet"></i> New Brunswick, NJ
-                </span>
-            </div>
+                <!-- Action Buttons Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a href="https://www.linkedin.com/in/nishidalia/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-rutgers-scarlet text-white font-bold text-sm hover:bg-rutgers-hover shadow-scarlet-glow hover:shadow-lg transition-all duration-200 active:scale-[0.98]">
+                        <i class="fab fa-linkedin text-lg"></i> Connect on LinkedIn
+                    </a>
+                    
+                    <button onclick="openContactModal()" 
+                            class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-white border border-slate-300 text-slate-800 font-bold text-sm hover:border-rutgers-scarlet hover:text-rutgers-scarlet hover:bg-rutgers-light/40 shadow-sm transition-all duration-200 active:scale-[0.98]">
+                        <i class="fas fa-envelope-open-text text-base text-rutgers-scarlet"></i> Contact Me!
+                    </button>
+                </div>
 
-            <!-- Action Buttons Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <a href="https://www.linkedin.com/in/nishidalia/" target="_blank" rel="noopener noreferrer" 
-                   class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-rutgers-scarlet text-white font-bold text-sm hover:bg-rutgers-hover shadow-scarlet-glow hover:shadow-lg transition-all duration-200 active:scale-[0.98]">
-                    <i class="fab fa-linkedin text-lg"></i> Connect on LinkedIn
-                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DEDICATED INDEPENDENT SKILLS SECTION -->
+        <section id="skills" class="scroll-mt-24">
+            <div class="glass-card rounded-3xl border border-slate-200/80 shadow-glass p-8 sm:p-12 relative overflow-hidden transition-all duration-300 hover:border-rutgers-border">
                 
-                <button onclick="openContactModal()" 
-                        class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-white border border-slate-300 text-slate-800 font-bold text-sm hover:border-rutgers-scarlet hover:text-rutgers-scarlet hover:bg-rutgers-light/40 shadow-sm transition-all duration-200 active:scale-[0.98]">
-                    <i class="fas fa-envelope-open-text text-base text-rutgers-scarlet"></i> Contact Me!
-                </button>
-            </div>
+                <div class="flex items-center justify-between mb-8 border-b border-slate-100 pb-5">
+                    <div>
+                        <div class="text-xs font-extrabold uppercase tracking-widest text-rutgers-scarlet mb-1">
+                            Capabilities & Toolset
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                            Skills & Competencies
+                        </h2>
+                    </div>
+                    <div class="w-10 h-10 rounded-2xl bg-rutgers-light border border-rutgers-border flex items-center justify-center text-rutgers-scarlet text-lg">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                </div>
 
-        </div>
+                <!-- Skills Grid Layout -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    
+                    <!-- Skill Card 1 -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-rutgers-border hover:shadow-md transition-all group">
+                        <div class="flex items-center gap-3.5 mb-2.5">
+                            <div class="w-10 h-10 rounded-xl bg-rutgers-light text-rutgers-scarlet flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Critical Thinking</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 font-medium leading-relaxed">
+                            Evaluating complex data sets, identifying logical core business insights, and framing structured solutions for strategic decision-making.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 2 -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-rutgers-border hover:shadow-md transition-all group">
+                        <div class="flex items-center gap-3.5 mb-2.5">
+                            <div class="w-10 h-10 rounded-xl bg-rutgers-light text-rutgers-scarlet flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Time Management</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 font-medium leading-relaxed">
+                            Balancing rigorous finance coursework, professional leadership commitments, and project deadlines with efficient prioritization.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 3 -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-rutgers-border hover:shadow-md transition-all group">
+                        <div class="flex items-center gap-3.5 mb-2.5">
+                            <div class="w-10 h-10 rounded-xl bg-rutgers-light text-rutgers-scarlet flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Financial Markets</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 font-medium leading-relaxed">
+                            Understanding market dynamics, corporate finance principles, capital allocation strategies, and economic decision frameworks.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 4 -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-rutgers-border hover:shadow-md transition-all group">
+                        <div class="flex items-center gap-3.5 mb-2.5">
+                            <div class="w-10 h-10 rounded-xl bg-rutgers-light text-rutgers-scarlet flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Programming</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 font-medium leading-relaxed">
+                            Building foundational quantitative logic and analytical scripting skills to streamline data processing and business logic.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 5 -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-rutgers-border hover:shadow-md transition-all group">
+                        <div class="flex items-center gap-3.5 mb-2.5">
+                            <div class="w-10 h-10 rounded-xl bg-rutgers-light text-rutgers-scarlet flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Microsoft Office Suite</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 font-medium leading-relaxed">
+                            Proficient in Excel spreadsheet modeling, Word executive reports, and PowerPoint slide deck creation for business communications.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 6 -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-rutgers-border hover:shadow-md transition-all group">
+                        <div class="flex items-center gap-3.5 mb-2.5">
+                            <div class="w-10 h-10 rounded-xl bg-rutgers-light text-rutgers-scarlet flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Artificial Intelligence</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 font-medium leading-relaxed">
+                            Leveraging modern AI tools and automated analytical frameworks to accelerate research, insights, and productivity.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
 
         <!-- GitHub Pages Hosting Drawer Trigger -->
-        <div class="mt-8 text-center">
+        <div class="text-center pt-4">
             <button onclick="toggleGuide()" class="text-xs font-semibold text-slate-400 hover:text-rutgers-scarlet transition-colors inline-flex items-center gap-1.5">
                 <i class="fas fa-code-branch"></i> How to host this website on GitHub Pages
                 <i id="guide-chevron" class="fas fa-chevron-down text-[10px] transition-transform duration-200"></i>
@@ -213,7 +301,7 @@
         </div>
 
         <!-- GitHub Pages Setup Drawer -->
-        <div id="github-guide" class="hidden mt-4 glass-card rounded-2xl border border-slate-200 p-6 text-left transition-all">
+        <div id="github-guide" class="hidden glass-card rounded-2xl border border-slate-200 p-6 text-left transition-all">
             <h3 class="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
                 <i class="fab fa-github text-rutgers-scarlet"></i> Deploying on GitHub Pages (Step-by-Step):
             </h3>
